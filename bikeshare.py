@@ -2,7 +2,7 @@
 """
 #BikeShare Project
 #This program explores data related to bike share systems for three major
-#cities in the United States—Chicago, New York City, and Washington. 
+#cities in the United States—Chicago, New York City, and Washington.
 #Umadevi R
 #01/14/2019
 
@@ -22,7 +22,7 @@ MONTH_DATA = {0: 'all months', 1: 'January', 2: 'February', 3: 'March', 4: 'Apri
 def welcome_message():
 
     """
-    Asks user to select a city to analyze.
+    Asks user to select a city from options 1,2 or 3 to analyze or 4 to exit.
     Then passes control to function category_input()
     """
 
