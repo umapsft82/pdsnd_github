@@ -195,8 +195,7 @@ def category_two(city_num,month_num,option_num):
 
     print('\n*****************Popular Start/End Stations*****************')
     #common start station
-    popular_startstation =df['Start Station'].mode().loc[0]
-    print('\nMost popular start station\t\t: ' ,popular_startstation)
+    print('\nMost popular start station\t\t: ' ,df['Start Station'].mode().loc[0])
     print('Number of occurences for Start Station\t: ', df['Start Station'].value_counts().iloc[0])
     #common end station
     popular_endstation =
@@ -232,17 +231,14 @@ def category_three(city_num,month_num,option_num):
         df=df[df['month'] == month_num]
 
     print('\n******************Trip Duration Information******************')
-    Total_Trip_Time= df['Trip Duration'].sum()
-    print('\nTotal Trip time\t\t: ', Total_Trip_Time)
+    print('\nTotal Trip time\t\t: ', df['Trip Duration'].sum())
     #Average Trip Time
     Avg_trip_time = Total_Trip_Time/df['Start Time'].count()
     print('Average Trip Time\t\t: ', Avg_trip_time)
     #Longest Trip duration
-    Max_Trip_Time= df['Trip Duration'].max()
-    print('Max Trip time\t\t: ', Max_Trip_Time)
+    print('Max Trip time\t\t: ', df['Trip Duration'].max())
     #Shortest Trip duration
-    Min_Trip_Time= df['Trip Duration'].min()
-    print('Min Trip time\t\t: ', Min_Trip_Time)
+    print('Min Trip time\t\t: ', df['Trip Duration'].min())
     end_time = datetime.now()
     print('\nProcessing Time: {}'.format(end_time - start_time))
     if (option_num != 5):
@@ -279,17 +275,13 @@ def category_four(city_num,month_num,option_num):
         print('\nGender Information:')
         print(gender_count)
         #common birth year
-        Bir_year = df['Birth Year'].mode().loc[0]
-        print('\nCommon Birth Year\t\t: ', Bir_year)
+        print('\nCommon Birth Year\t\t: ', df['Birth Year'].mode().loc[0])
         #Total birth counts
-        Birth_count = df['Birth Year'].value_counts().iloc[0]
-        print('Number of Births\t\t: ', Birth_count )
+        print('Number of Births\t\t: ', df['Birth Year'].value_counts().iloc[0] )
         #Earliest birth year
-        Earliest_year = df['Birth Year'].min()
-        print('Earliest Birth Year\t\t: ', Earliest_year)
+        print('Earliest Birth Year\t\t: ', df['Birth Year'].min())
         #Recent birth year
-        Recent_year = df['Birth Year'].max()
-        print('Recent Birth Year\t\t: ', Recent_year)
+        print('Recent Birth Year\t\t: ', df['Birth Year'].max())
         end_time = datetime.now()
         print('\nProcessing Time: {}'.format(end_time - start_time))
 
